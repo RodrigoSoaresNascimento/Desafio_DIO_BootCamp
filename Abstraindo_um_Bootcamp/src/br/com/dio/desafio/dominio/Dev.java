@@ -80,5 +80,11 @@ public class Dev {
 				&& Objects.equals(subscribedContent, other.subscribedContent);
 	}
 	
+	public Dev(String name) {
+		super();
+		this.name = name;
+	}
+	
+	
 
 }

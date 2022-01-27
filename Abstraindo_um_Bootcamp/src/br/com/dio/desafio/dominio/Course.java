@@ -27,6 +27,16 @@ public class Course extends Contents {
 		return XP_MAIN * workload;
 		
 	}
+
+	/**
+	 * @param title
+	 * @param description
+	 * @param workload
+	 */
+	public Course(String title, String description, Double workload) {
+		super(title, description);
+		this.workload = workload;
+	}
 	
 	
 

@@ -11,35 +11,21 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Course course = new Course();
+		Course course = new Course("Introdução a programação",
+				"Desenvolvendo a logica de programação na linguagem java", 40.0 );
 		
-		course.setTitle("Introdução a programação");
 		
-		course.setDescription("Desenvolvendo a logica de programação na linguagem java");
+		Course course1 = new Course("Introdução a programação em javascript",
+				"Integrando HTML e CCS ao javascript", 80.0 );
 		
-		course.setWorkload(40.0);
 		
-		Course course1 = new Course();
+		Mentorship mentorship = new Mentorship("Boas praticas em um prjeto SpringBoot",
+				"Introdução ao spring boot framework", LocalDate.now());
 		
-		course1.setTitle("Introdução a programação em javascript");
 		
-		course1.setDescription("Integrando HTML e CCS ao javascript");
+		BootCamp bootCamp = new BootCamp(" Java development ", "Desenvolvimento em java"
+				);
 		
-		course1.setWorkload(80.0);
-		
-		Mentorship mentorship = new Mentorship();
-		
-		mentorship.setDate(LocalDate.now());
-		
-		mentorship.setDescription("Introdução ao spring boot framework");
-		
-		mentorship.setTitle("Boas praticas em um prjeto SpringBoot");
-		
-		BootCamp bootCamp = new BootCamp();
-		
-		bootCamp.setName(" Java development ");
-		
-		bootCamp.setDescription("Desenvolvimento em java");
 		
 		bootCamp.getContent().add(course);
 		
@@ -47,9 +33,8 @@ public class Main {
 		
 		bootCamp.getContent().add(mentorship);
 		
-		Dev dev = new Dev(); 
+		Dev dev = new Dev("Rodrigo"); 
 		
-		dev.setName("Rodrigo");
 		
 		dev.subscribedBootCamp(bootCamp);
 		
@@ -65,9 +50,7 @@ public class Main {
 		
 		System.out.println("Total de Xp " + dev.calculateXPTotal());
 		
-		Dev dev1 = new Dev();
-		
-		dev1.setName("Eduardo");
+		Dev dev1 = new Dev("Eduardo");
 		
 		dev1.subscribedBootCamp(bootCamp);
 		

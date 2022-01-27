@@ -12,6 +12,14 @@ public class BootCamp  {
 	
 	private String description;
 	
+	private final LocalDate initDate = LocalDate.now();
+	
+	private final LocalDate finalDate = initDate.plusDays(45);
+	
+	private Set <Dev> subscribeDevs = new HashSet<>();
+	
+	private Set <Contents> content = new LinkedHashSet<>();
+	
 	public String getName() {
 		return name;
 	}
@@ -27,14 +35,6 @@ public class BootCamp  {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
-	private final LocalDate initDate = LocalDate.now();
-	
-	private final LocalDate finalDate = initDate.plusDays(45);
-	
-	private Set <Dev> subscribeDevs = new HashSet<>();
-	
-	private Set <Contents> content = new LinkedHashSet<>();
 
 
 	public Set<Dev> getSubscribeDevs() {
@@ -77,6 +77,12 @@ public class BootCamp  {
 		BootCamp other = (BootCamp) obj;
 		return Objects.equals(content, other.content) && Objects.equals(finalDate, other.finalDate)
 				&& Objects.equals(initDate, other.initDate) && Objects.equals(subscribeDevs, other.subscribeDevs);
+	}
+
+	public BootCamp(String name, String description) {
+		super();
+		this.name = name;
+		this.description = description;
 	}
 	
 	

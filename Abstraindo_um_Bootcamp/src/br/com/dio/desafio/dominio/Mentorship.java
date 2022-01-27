@@ -29,6 +29,11 @@ public class Mentorship extends Contents {
 		
 	}
 
+	public Mentorship(String title, String description, LocalDate date) {
+		super(title, description);
+		this.date = date;
+	}
+
 	
 	
 	
